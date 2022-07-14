@@ -78,7 +78,8 @@ def augmentation(img_arr, scale_arr=None, translation_arr=None, rotate_arr=None)
     ans = np.zeros(ans_shape, dtype=np.single)
 
     for img in img_arr:
-        pass
+        for angle in rotate_arr:
+            tmp_pic = img.rotate(angle, resample=Image.BILINEAR)
     return ans
 
 
